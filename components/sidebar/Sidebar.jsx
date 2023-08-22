@@ -85,11 +85,15 @@ const Sidebar = ( {file, files, setFiles, setFileName, fileName, fileChange, cod
       <BiSearchAlt className="h-4 w-4" />
     </Button>
     <Button variant="outline" size="icon" className="bg-white"
-      onClick={()=> window.open('https://github.com', '_blank')}
+      onClick={()=> {
+        if (typeof window !== "undefined"){
+        window.open('https://github.com', '_blank')}}}
     >
       <BsGithub className="h-4 w-4" />
     </Button>
-    <Button variant="outline" size="icon" className="bg-white" onClick={()=> window.open('https://vercel.com', '_blank')}>
+    <Button variant="outline" size="icon" className="bg-white" onClick={()=> {
+      if (typeof window !== "undefined"){
+      window.open('https://vercel.com', '_blank')}}}>
       <BsRocketTakeoffFill className="h-4 w-4" />
     </Button>
     <Button variant="outline" size="icon" className="bg-white">
