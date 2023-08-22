@@ -1,4 +1,5 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import FilesDir from "../files/FilesDir"
 import { VscNewFile } from "react-icons/vsc";
 import { Input } from "@/components/ui/input"
@@ -21,13 +22,14 @@ import { firestore } from "@/firebase/firestore";
 import { useState } from "react";
 
 const Sidebar = ( {file, files, setFiles, setFileName, fileName, fileChange, code, userId, repo, lang} ) => {
+  const router = useRouter()
   const [newFileName, setNewFileName]= useState()
 
   const handleNewFile= async (e)=>{
     e.preventDefault()
     console.log("enter pressed")
     await firestore.addNewFile(userId, repo, lang, newFileName)
-    window.location.reload()
+    router.reload()
   }
 
   return (

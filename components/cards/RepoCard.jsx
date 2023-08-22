@@ -7,13 +7,14 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
+  import { usePathname } from 'next/navigation'
 import { RiEdit2Fill } from "react-icons/ri";
 import Image from "next/image"
 import Link from "next/link"
 import { languages } from "@/constants/languages";
 
 const RepoCard = ( {repoDetails} ) => {
-  const location= window.location.href
+  const pathname= usePathname()
   console.log(repoDetails)
   if (!repoDetails) {
     return 
@@ -34,7 +35,7 @@ const RepoCard = ( {repoDetails} ) => {
     key={item.name}
     className="h-60 w-72">
            <Link 
-      href={`${location}/editor?repo=${item.repo}&lang=${item.languageId}`}
+      href={`${pathname}/editor?repo=${item.repo}&lang=${item.languageId}`}
     >
       <Image 
         className="w-full h-28"
