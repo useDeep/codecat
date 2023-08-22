@@ -22,7 +22,7 @@ export const compileCode= async ( payload )=>{
         return data
     } catch(error){
         console.log(error)
-        alert("Something went wrong => ",error)
+        alert("Something went wrong => "+ error)
     }
 }
 
@@ -57,6 +57,6 @@ export const getOutput= async ( token )=>{
         }
   } catch (error) {
     console.error(error);
-    alert("Something went wrong => ", error)
+    alert("Something went wrong => "+ error)
   }
 }
