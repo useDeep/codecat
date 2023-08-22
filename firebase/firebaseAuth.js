@@ -13,7 +13,7 @@ export const firebaseAuth= {
                 sessionStorage.setItem('Token', response.user.accessToken)
                 return (response.user)
         } catch (err){
-                alert('You are already loggedin')
+                alert('Something went wrong => ', err)
      }},
         
     logout : async () => {
