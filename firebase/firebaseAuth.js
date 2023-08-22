@@ -11,7 +11,7 @@ export const firebaseAuth= {
         try{
         const response= await signInWithPopup(auth, provider)
                 sessionStorage.setItem('Token', response.user.accessToken)
-                window.location.reload()
+                // window.location.reload()
                 return (response.user)
         } catch (err){
                 alert('You are already loggedin')

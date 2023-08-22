@@ -50,7 +50,6 @@ const page = () => {
     getRepoData()
   }, [user])
   
-  console.log(repoDetails)
   return (
     <>
     <div className="m-auto w-11/12 relative">

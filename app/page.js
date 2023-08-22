@@ -17,19 +17,23 @@ const page = () => {
   const [user, setUser]= useState(null)
   const [loading, setLoading]= useState(false)
 
-  useEffect(()=> {
-    const token = sessionStorage.getItem("Token")
-    const getUser= (token)=>{
-      const data= firebaseAuth.decrypt(token)
-      setUser(data)
-    }
-    getUser(token)
-  }, [])
-
   const signInHandle= async ()=>{
     setLoading(true)
     const data=await firebaseAuth.signInWithGithub()
     await firestore.addUser(data)
+
+    const token = sessionStorage.getItem("Token")
+    if (token){
+      const getUser= async (token)=>{
+        try{
+          const data= firebaseAuth.decrypt(token)
+          setUser(data)
+        }catch(error){
+          console.log(error)
+        }
+      }
+      getUser(token)
+    }
     setLoading(false)
   }
 

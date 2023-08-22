@@ -1,3 +1,4 @@
+'use client'
 import FilesDir from "../files/FilesDir"
 import { VscNewFile } from "react-icons/vsc";
 import { Input } from "@/components/ui/input"
