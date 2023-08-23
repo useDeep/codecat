@@ -34,7 +34,7 @@ const EditorNavbar = ( { user, file, onCodeSubmit, repo, userId, lang, userInput
             stdin: btoa(userInput),
           };
           const data= await compileCode( payload )
-          const token= await data.token
+          const token= await data?.token
           await onCodeSubmit(token)
           setProcessing(false)
     }

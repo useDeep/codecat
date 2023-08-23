@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+console.log(process.env.NEXT_PUBLIC_JUDGE0_API)
 export const compileCode= async ( payload )=>{
     const options = {
         method: 'POST',
@@ -11,7 +11,7 @@ export const compileCode= async ( payload )=>{
         headers: {
           'content-type': 'application/json',
           'Content-Type': 'application/json',
-          'X-RapidAPI-Key': process.env.JUDGE0_API,
+          'X-RapidAPI-Key': process.env.NEXT_PUBLIC_JUDGE0_API,
           'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com'
         },
         data: payload
@@ -38,7 +38,7 @@ export const getOutput= async ( token )=>{
     headers: {          
       'content-type': 'application/json',
       'Content-Type': 'application/json',
-      'X-RapidAPI-Key': process.env.JUDGE0_API,
+      'X-RapidAPI-Key': process.env.NEXT_PUBLIC_JUDGE0_API,
       'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com'
     }
   };
