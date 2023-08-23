@@ -64,7 +64,7 @@ const MainNavbar = ( {user, setUser, signInHandle, signOutHandle, loading, creat
         <PopoverTrigger>
         <Avatar>
           <AvatarImage src={user?.picture} />
-          <AvatarFallback>{user?.name.slice(0,2)}</AvatarFallback>
+          <AvatarFallback>"CC"</AvatarFallback>
         </Avatar>
         <PopoverContent className='w-full'>
         <Button onClick={signOutHandle}>Log Out</Button>

@@ -82,7 +82,7 @@ const EditorNavbar = ( { user, file, onCodeSubmit, repo, userId, lang, userInput
                 {user ? 
                     <Avatar>
                     <AvatarImage src={user?.picture} />
-                    <AvatarFallback>{user?.name.slice(0,2)}</AvatarFallback>
+                    <AvatarFallback>"CC"</AvatarFallback>
                   </Avatar> :
                   <RxAvatar />
                 }
