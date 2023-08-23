@@ -1,5 +1,5 @@
 import axios from 'axios';
-console.log(process.env.NEXT_PUBLIC_JUDGE0_API)
+
 export const compileCode= async ( payload )=>{
     const options = {
         method: 'POST',
