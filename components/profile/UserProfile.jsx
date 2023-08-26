@@ -11,7 +11,7 @@ const UserProfile = ( {user} ) => {
   <AvatarImage src={user?.picture} />
   <AvatarFallback
     className="text-2xl"
-  >{user?.name.slice(0,2)}</AvatarFallback>
+  >"CC"</AvatarFallback>
 </Avatar>
     <h1
       className="text-2xl font-bold mt-5"

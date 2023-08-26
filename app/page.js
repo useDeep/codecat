@@ -39,6 +39,7 @@ const page = () => {
 
   const signOutHandle= async ()=>{
     await firebaseAuth.logout()
+    router.push('/')
     const token = sessionStorage.getItem("Token")
     const data= await firebaseAuth.decrypt(token)
       setUser(data)
