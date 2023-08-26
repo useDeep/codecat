@@ -56,7 +56,7 @@ const NewForm = ( {user} ) => {
   const [loading, setLoading]= useState(false)
   const router= useRouter()
   const pathname= usePathname()
-  
+  const name= user?.name !== null ? user?.name : "guest"
   const formSchema = z.object({
     // author: z.string().default(user?.name),
     repo: z.string({
@@ -114,7 +114,7 @@ const NewForm = ( {user} ) => {
               <FormControl>
                 <Input
                   className= ""
-                {...field} value={user?.name} disabled/>
+                {...field} value={name} disabled/>
               </FormControl>
               <FormDescription>
               </FormDescription>
