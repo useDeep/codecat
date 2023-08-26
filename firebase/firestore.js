@@ -46,7 +46,7 @@ export const firestore= {
 
       if (!docSnap.exists()) {
         await setDoc(repoRef, {
-          author : values.author,
+          author : values?.author || "Guest",
           description : values.description,
           languageId : values.language,
           repo : values.repo,

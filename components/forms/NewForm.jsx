@@ -56,9 +56,9 @@ const NewForm = ( {user} ) => {
   const [loading, setLoading]= useState(false)
   const router= useRouter()
   const pathname= usePathname()
-  const name= user?.name !== null ? user?.name : "guest"
+  const displayName= typeof(user?.name) !== 'undefined' ? user?.name : "Guest"
   const formSchema = z.object({
-    // author: z.string().default(user?.name),
+    author: z.string().default(displayName),
     repo: z.string({
       required_error: "Repo name cannot be empty"
     }).min(4, {
@@ -85,6 +85,7 @@ const NewForm = ( {user} ) => {
 
   const onSubmit= async (values) =>{
     setLoading(true)
+    console.log(values)
     const result= await firestore.createRepo(user, values)
     if (result == 1){
       router.push(`${pathname}/editor?repo=${values.repo}&lang=${values.language}`)
@@ -114,7 +115,7 @@ const NewForm = ( {user} ) => {
               <FormControl>
                 <Input
                   className= ""
-                {...field} value={name} disabled/>
+                {...field} value={displayName} disabled/>
               </FormControl>
               <FormDescription>
               </FormDescription>
