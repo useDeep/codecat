@@ -4,7 +4,7 @@ const UserProfile = ( {user} ) => {
   
   const dateString= user?.exp
   const options = { year: "numeric", month: "long", day: "numeric" }
-  const date= new Date(dateString).toLocaleDateString(undefined, options)
+  const date= new Date(dateString).toLocaleString('en-US', options)
   return (
     <div className="flex flex-col justify-center items-center bg-transperant">
   <Avatar className="h-40 w-40 border-white border-4">

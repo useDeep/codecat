@@ -58,7 +58,7 @@ const NewForm = ( {user} ) => {
   const pathname= usePathname()
   
   const formSchema = z.object({
-    author: z.string().default(user?.name),
+    // author: z.string().default(user?.name),
     repo: z.string({
       required_error: "Repo name cannot be empty"
     }).min(4, {

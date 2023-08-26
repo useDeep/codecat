@@ -21,7 +21,7 @@ const Console = ( {output} ) => {
       );
     } else if (statusId === 3) {
       return (
-        <pre className="px-2 py-1 font-normal text-sm text-green-500">
+        <pre className="px-2 py-1 font-normal text-sm text-black-500">
           {atob(output.stdout) !== null
             ? `${atob(output.stdout)}`
             : null}
