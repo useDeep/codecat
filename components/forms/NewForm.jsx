@@ -85,7 +85,6 @@ const NewForm = ( {user} ) => {
 
   const onSubmit= async (values) =>{
     setLoading(true)
-    console.log(values)
     const result= await firestore.createRepo(user, values)
     if (result == 1){
       router.push(`${pathname}/editor?repo=${values.repo}&lang=${values.language}`)

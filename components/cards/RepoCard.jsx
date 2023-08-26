@@ -15,7 +15,6 @@ import { languages } from "@/constants/languages";
 
 const RepoCard = ( {repoDetails} ) => {
   const pathname= usePathname()
-  console.log(repoDetails)
   if (!repoDetails) {
     return 
   }
@@ -40,6 +39,7 @@ const RepoCard = ( {repoDetails} ) => {
       <Image 
         className="w-full h-28"
         src="/cat-hero.png"
+        alt= "a cat photo"
         width={100}
         height={100}
     />

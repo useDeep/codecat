@@ -27,9 +27,7 @@ const Sidebar = ( {file, files, setFiles, setFileName, fileName, fileChange, cod
 
   const handleNewFile= async (e)=>{
     e.preventDefault()
-    console.log("enter pressed")
     await firestore.addNewFile(userId, repo, lang, newFileName)
-    router.reload()
   }
 
   return (

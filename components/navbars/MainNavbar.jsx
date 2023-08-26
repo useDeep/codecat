@@ -39,7 +39,7 @@ const MainNavbar = ( {user, setUser, signInHandle, signOutHandle, loading, creat
       src="/cat-logo.png"
       width={60}
       height={60}
-      alt="logo"
+      alt="codeCat logo"
     />
     <div className="logo_text font-bold primary_text text-2xl -ml-2">codeCat</div>
         </div>
@@ -64,7 +64,7 @@ const MainNavbar = ( {user, setUser, signInHandle, signOutHandle, loading, creat
         <PopoverTrigger>
         <Avatar>
           <AvatarImage src={user?.picture} />
-          <AvatarFallback>"CC"</AvatarFallback>
+          <AvatarFallback>CC</AvatarFallback>
         </Avatar>
         <PopoverContent className='w-full'>
         <Button onClick={signOutHandle}>Log Out</Button>

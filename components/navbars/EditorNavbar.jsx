@@ -48,9 +48,9 @@ const EditorNavbar = ( { user, file, onCodeSubmit, repo, userId, lang, userInput
             >
         <Image
       src="/cat-logo.png"
+      alt= "codeCat logo"
       width={50}
       height={50}
-      alt="logo"
     />
     </Link>
             <h5 className="text-lg font-semibold">
@@ -82,7 +82,7 @@ const EditorNavbar = ( { user, file, onCodeSubmit, repo, userId, lang, userInput
                 {user ? 
                     <Avatar>
                     <AvatarImage src={user?.picture} />
-                    <AvatarFallback>"CC"</AvatarFallback>
+                    <AvatarFallback>CC</AvatarFallback>
                   </Avatar> :
                   <RxAvatar />
                 }

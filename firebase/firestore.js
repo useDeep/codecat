@@ -4,7 +4,6 @@ import { addDoc, collection, doc, getDoc, setDoc, getDocs, updateDoc, query, wri
 export const firestore= {
 
   addUser : async (user) => {
-    console.log(user)
     const userRef = doc(db, "users", user?.uid)
     const userSnapshot = await getDoc(userRef);
 
@@ -140,6 +139,9 @@ export const firestore= {
         languageId: lang,
         code: ""
       });
+      if (typeof window !== "undefined"){
+        window.location.reload()
+      }
 
     },
 }

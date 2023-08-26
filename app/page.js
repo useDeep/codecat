@@ -99,7 +99,7 @@ const page = () => {
       src="/cat-hero.png"
       width={550}
       height={550}
-      alt="codeCar logo"
+      alt="codeCat logo"
     />
     
     </main>
