@@ -10,7 +10,7 @@ export const firestore= {
 
     if (!userSnapshot.exists()) {
       await setDoc(userRef, {
-        name : user.displayName,
+        name : user.displayName !== null ? user.displayName : "Guest",
         email : user.email,
         createdAt : user.metadata.createdAt,
         uid : user.uid,
